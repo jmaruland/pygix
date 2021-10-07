@@ -68,19 +68,18 @@ def get_readme():
     return long_description
 
 
-classifiers = ["Development Status :: 2 - Pre-alpha",
+classifiers = ["Development Status :: 2 - Pre-Alpha",
                "Intended Audience :: Developers",
                "Intended Audience :: Education",
                "Intended Audience :: Science/Research",
                "Natural Language :: English",
                "Programming Language :: Cython",
-               "Programming Language :: Python :: 2",
-               "Programming Language :: Python :: 2.7",
+               "Programming Language :: Python :: 3",
                "Programming Language :: Python :: Implementation :: CPython",
                "Environment :: Console",
                "Environment :: MacOS X",
                "Environment :: Win32 (MS Windows)",
-               "License :: OSI Approved :: GPLv3+",
+               "License :: OSI Approved :: MIT License",
                "Operating System :: Microsoft :: Windows",
                "Operating System :: Unix",
                "Operating System :: POSIX",
@@ -240,13 +239,14 @@ setup_requires = ["numpy"]
 
 setup_kwargs.update(
     name=PROJECT,
-    version=get_version(),
+    version="2021.10.7",
     url="https://github.com/tgdane/pygix",
     author="Thomas Dane",
     author_email="thomasgdane@gmail.com",
     classifiers=classifiers,
     description="Software library for grazing-incidence/fibre X-Ray data analysis",
     long_description=get_readme(),
+    long_description_content_type="text/markdown",
     install_requires=install_requires,
     setup_requires=setup_requires,
     cmdclass=cmdclass,
