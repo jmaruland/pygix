@@ -239,7 +239,7 @@ setup_requires = ["numpy"]
 
 setup_kwargs.update(
     name=PROJECT,
-    version="2021.10.7",
+    version="2021.10.7.1",
     url="https://github.com/tgdane/pygix",
     author="Thomas Dane",
     author_email="thomasgdane@gmail.com",
