@@ -836,7 +836,7 @@ class Transform(GrazingGeometry):
                     not self._lut_gi_transformer.default_ipl):
                         reset = "x_range was defined in LUT"
                     elif (x_range is not None) and \
-                            (self._lut_gi_transformer.pos0Range != (
+                            (self._lut_gi_transformer.pos0_Range != (
                             min(x_range), max(x_range) * EPS32)):
                         reset = ("x_range is defined"
                                  " but not the same as in LUT")
@@ -844,7 +844,7 @@ class Transform(GrazingGeometry):
                         y_range is None) and not self._lut_gi_transformer.default_opl:
                         reset = "y_range not defined and LUT had y_range defined"
                     elif (y_range is not None) and \
-                            (self._lut_gi_transformer.pos1Range != (
+                            (self._lut_gi_transformer.pos1_Range != (
                             min(y_range), max(y_range) * EPS32)):
                         reset = "y_range requested and LUT's y_range don't match"
                 error = False
@@ -1500,14 +1500,14 @@ class Transform(GrazingGeometry):
                         p0_range is None) and not self._lut_gi_integrator.default_p0:
                         reset = "p0_range was defined in LUT"
                     elif (p0_range is not None) and \
-                            (self._lut_gi_integrator.pos0Range != (
+                            (self._lut_gi_integrator.pos0_Range != (
                             min(p0_range), max(p0_range) * EPS32)):
                         reset = "p0_range is defined but not the same as in LUT"
                     if (
                         p1_range is None) and not self._lut_gi_integrator.default_p1:
                         reset = "p1_range not defined and LUT had p1_range defined"
                     elif (p1_range is not None) and \
-                            (self._lut_gi_integrator.pos1Range != (
+                            (self._lut_gi_integrator.pos1_Range != (
                             min(p1_range), max(p1_range) * EPS32)):
                         reset = "p1_range requested and LUT's p1_range don't match"
                 if reset:
